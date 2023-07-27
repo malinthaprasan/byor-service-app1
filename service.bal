@@ -19,15 +19,15 @@ type Book record {|
 |};
 
 BookItem bookitem1 = {author: "John Carter", status: reading, title: "A Tour To Mars"};
-Book book1 = {book_id: uuid:createType1AsString(), ...bookitem1};
+Book book1 = {book_id: "01ee2c40-6344-117e-963d-5b5fa299dfd4", ...bookitem1};
 string bookId1 = uuid:createType1AsString();
 
 BookItem bookitem2 = {author: "Frank Smith", status: read, title: "Dead Men"};
-Book book2 = {book_id: uuid:createType1AsString(), ...bookitem2};
+Book book2 = {book_id: "01ee2c40-6344-117e-a255-56730a9fb1a3", ...bookitem2};
 string bookId2 = uuid:createType1AsString();
 
 BookItem bookitem3 = {author: "Jude Silvester", status: to_read, title: "The Bucther"};
-Book book3 = {book_id: uuid:createType1AsString(), ...bookitem3};
+Book book3 = {book_id: "01ee2c40-6344-117e-9d1b-94058a6d95d7", ...bookitem3};
 string bookId3 = uuid:createType1AsString();
 
 map<Book> books = {
