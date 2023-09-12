@@ -1,5 +1,7 @@
 import ballerina/uuid;
 import ballerina/http;
+import ballerina/log;
+
 
 enum Status {
     reading = "reading",
