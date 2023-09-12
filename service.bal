@@ -40,6 +40,7 @@ service /readinglist on new http:Listener(9090) {
 
     resource function get books() returns Book[]|error? {
         return books.toArray();
+    log:printInfo("This is a test log");
     }
 
     resource function post books(@http:Payload BookItem newBook) returns record {|*http:Ok;|}|error? {
