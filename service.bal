@@ -20,7 +20,7 @@ type Book record {|
     string book_id;
 |};
 
-BookItem bookitem1 = {author: "John Carter changed", status: reading, title: "A Tour To Mars"};
+BookItem bookitem1 = {author: "John Carter changed again", status: reading, title: "A Tour To Mars"};
 Book book1 = {book_id: "01ee2c40-6344-117e-963d-5b5fa299dfd4", ...bookitem1};
 string bookId1 = uuid:createType1AsString();
 
