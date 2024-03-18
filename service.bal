@@ -51,6 +51,12 @@ service / on new http:Listener(9090) {
         return {};
     }
 
+    resource function put books(@http:Payload BookItem newBook) returns record {|*http:Ok;|}|error? {
+        string bookId = uuid:createType1AsString();
+        books[bookId] = {...newBook, book_id: bookId};
+        return {};
+    }
+
     resource function delete books(string id) returns record {|*http:Ok;|}|error? {
         _ = books.remove(id);
         return {};
