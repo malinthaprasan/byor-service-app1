@@ -20,7 +20,7 @@ type Book record {|
     string book_id;
 |};
 
-BookItem bookitem1 = {author: "John Carter", status: reading, title: "A Tour To Mars"};
+BookItem bookitem1 = {author: "John Carter changed", status: reading, title: "A Tour To Mars"};
 Book book1 = {book_id: "01ee2c40-6344-117e-963d-5b5fa299dfd4", ...bookitem1};
 string bookId1 = uuid:createType1AsString();
 
@@ -38,7 +38,7 @@ map<Book> books = {
     bookId3: book3
 };
 
-service /readinglist on new http:Listener(9090) {
+service / on new http:Listener(9090) {
 
     resource function get books() returns Book[]|error? {
          log:printInfo("This is a test log");
